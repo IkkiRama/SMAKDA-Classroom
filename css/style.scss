@@ -1,0 +1,366 @@
+:root {
+    --shadow-header: 0 1rem 1rem rgba(0, 0, 0, 0.1);
+    --background-heroHome: linear-gradient(to top right, #450b7c, #563cc9, #49e9fb);
+    --background-header: linear-gradient(to right, #450b7c, #563cc9);
+    --kuningCerah: rgb(255, 160, 17);
+
+    --hero: #111827;
+
+    --hitam-santai: #302f2f;
+    --putih: #fff;
+    --putih-f2: #f2f2f2;
+    --putih-900: #F2F4F7;
+    --ungu: #963EFF;
+    --kuning: #FCE354;
+    --biru-cerah: #1352FF;
+    --border: 2px solid #e4e4e7;
+
+
+    /* btn */
+    --danger: #dc3545;
+    --primary: #007bff;
+    --warning: #ffc107;
+
+    --tw-gradient-to: #06b6d4;
+    --tw-gradient-from: #0d6efd;
+    --tw-gradient-stops: #0d6efd,
+        #22d3ee,
+        #06b6d4;
+    // rgba(34, 211, 238, 0)
+    // --tw-gradient-stops: var(--tw-gradient-from, #22d3ee, var(--tw-gradient-to, rgba(34, 211, 238, 0)));
+}
+
+#scroll-top {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1rem;
+    z-index: 1000;
+    transform: translateY(150%);
+    transition: 3s;
+    cursor: pointer;
+}
+
+#scroll-top img {
+    width: 4rem;
+    /* animation: float 3s linear infinite; */
+}
+
+
+#scroll-top.show {
+    transform: translateY(0);
+    transition: 3s;
+}
+
+#scroll-top.show img {
+    animation: float 3s linear infinite;
+}
+
+
+@keyframes float {
+
+    0% {
+        transform: translateY(0rem);
+    }
+
+    50% {
+        transform: translateY(-2rem);
+    }
+
+    100% {
+        transform: translateY(0rem);
+    }
+}
+
+
+header {
+    width: 100%;
+    min-height: 10vh;
+    max-height: 100%;
+    position: fixed;
+    top: 0;
+    padding: 0 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--hero);
+    // background: var(--background-header);
+    box-shadow: var(--shadow-header);
+    z-index: 999999999999999999999999999999999999999999999999999999999999999999999999 !important;
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .kanan {
+            // width: 100%;
+            display: flex;
+            align-items: center;
+
+            .logo {
+                margin-right: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                img {
+                    width: 40px;
+                    height: 40px;
+                    margin-right: 10px;
+                }
+
+                h1 {
+                    font-size: 1.4rem;
+                    line-height: 22px;
+                    color: var(--putih);
+                    font-weight: 700;
+
+                    span {
+                        background: linear-gradient(to right, var(--tw-gradient-stops));
+                        background-clip: text;
+                        -moz-background-clip: text;
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                    }
+                }
+            }
+
+            nav {
+                ul {
+                    display: flex;
+
+                    li {
+                        margin: 0 10px;
+
+                        a {
+                            font-weight: 500;
+                            color: var(--putih);
+                        }
+                    }
+                }
+            }
+        }
+
+        .kiri {
+            height: 100%;
+            display: flex;
+            align-items: center;
+
+            .icon {
+                margin-right: 10px;
+                color: var(--putih);
+            }
+
+            .garis {
+                margin: 0 10px;
+                font-size: 1.4rem;
+                color: var(--putih);
+            }
+
+            .auth {
+
+                a {
+                    margin: 0 10px;
+                    color: var(--putih);
+                }
+            }
+
+            .profil {
+                width: 30px;
+                height: 30px;
+                margin-left: 10px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+            }
+
+            .menu {
+                width: 30px;
+                height: 20px;
+                display: none;
+                align-items: center;
+                justify-content: space-between;
+                flex-direction: column;
+                position: relative;
+                cursor: pointer;
+
+                input {
+                    width: 100%;
+                    height: 130%;
+                    position: absolute;
+                    top: -3px;
+                    opacity: 0;
+                }
+
+                span {
+                    width: 100%;
+                    height: 3px;
+                    border-radius: 10px;
+                    background-color: var(--putih);
+                }
+            }
+        }
+
+    }
+}
+
+.containerNavMobile {
+    width: 100%;
+    height: 100vh;
+    display: none;
+    position: fixed;
+    justify-content: end;
+    background-color: rgba(0, 0, 0, 0.1);
+
+    .navMobile {
+        width: 40%;
+        background-color: var(--putih);
+        padding-left: 20px;
+        padding-bottom: 20px;
+        padding-right: 20px;
+    }
+}
+
+
+.bg-gradient-to-r {
+    background: linear-gradient(to right, var(--tw-gradient-stops)) !important;
+    color: var(--putih);
+}
+
+
+
+
+@media(min-width:1500px) {
+    .container {
+        max-width: 1500px;
+    }
+
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media(max-width:1100px) {
+
+    header {
+        padding: 0 25px;
+    }
+}
+
+
+@media(max-width:900px) {
+
+    header {
+
+        .container {
+
+            .kanan {
+
+                .logo h1 {
+                    font-size: 1.2rem;
+                }
+
+                nav {
+                    display: none;
+                }
+            }
+
+            .kiri {
+
+                .icon {
+                    margin-right: 20px;
+                    font-size: 1.3rem;
+                }
+
+                .profil {
+                    margin-left: 0;
+                    margin-right: 20px;
+                }
+
+                .garis {
+                    display: none;
+                }
+
+                .auth {
+                    display: none;
+                }
+
+                .menu {
+                    display: flex;
+                }
+            }
+
+        }
+    }
+
+    .containerNavMobile {
+        display: flex;
+    }
+
+}
+
+@media(max-width:600px) {
+    header {
+        padding: 0 10px;
+    }
+}
+
+@media(max-width:500px) {
+    header {
+
+        .container {
+
+            .kanan {
+
+                .logo {
+
+                    img {
+                        width: 35px;
+                        height: 35px;
+                    }
+
+                    h1 {
+                        font-size: 1.1rem;
+                        line-height: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+@media(max-width:400px) {
+    header {
+
+        .container {
+
+            .kanan {
+
+                .logo {
+
+                    img {
+                        display: none;
+                    }
+                }
+            }
+
+            .kiri {
+
+
+                .icon,
+                .profil {
+                    margin-right: 15px;
+                }
+            }
+        }
+    }
+}

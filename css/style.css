@@ -1,0 +1,358 @@
+:root {
+  --shadow-header: 0 1rem 1rem rgba(0, 0, 0, 0.1);
+  --background-heroHome: linear-gradient(to top right, #450b7c, #563cc9, #49e9fb);
+  --background-header: linear-gradient(to right, #450b7c, #563cc9);
+  --kuningCerah: rgb(255, 160, 17);
+  --hero: #111827;
+  --hitam-santai: #302f2f;
+  --putih: #fff;
+  --putih-f2: #f2f2f2;
+  --putih-900: #F2F4F7;
+  --ungu: #963EFF;
+  --kuning: #FCE354;
+  --biru-cerah: #1352FF;
+  --border: 2px solid #e4e4e7;
+  /* btn */
+  --danger: #dc3545;
+  --primary: #007bff;
+  --warning: #ffc107;
+  --tw-gradient-to: #06b6d4;
+  --tw-gradient-from: #0d6efd;
+  --tw-gradient-stops: #0d6efd,
+        #22d3ee,
+        #06b6d4;
+}
+
+#scroll-top {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1rem;
+  z-index: 1000;
+  -webkit-transform: translateY(150%);
+          transform: translateY(150%);
+  -webkit-transition: 3s;
+  transition: 3s;
+  cursor: pointer;
+}
+
+#scroll-top img {
+  width: 4rem;
+  /* animation: float 3s linear infinite; */
+}
+
+#scroll-top.show {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: 3s;
+  transition: 3s;
+}
+
+#scroll-top.show img {
+  -webkit-animation: float 3s linear infinite;
+          animation: float 3s linear infinite;
+}
+
+@-webkit-keyframes float {
+  0% {
+    -webkit-transform: translateY(0rem);
+            transform: translateY(0rem);
+  }
+  50% {
+    -webkit-transform: translateY(-2rem);
+            transform: translateY(-2rem);
+  }
+  100% {
+    -webkit-transform: translateY(0rem);
+            transform: translateY(0rem);
+  }
+}
+
+@keyframes float {
+  0% {
+    -webkit-transform: translateY(0rem);
+            transform: translateY(0rem);
+  }
+  50% {
+    -webkit-transform: translateY(-2rem);
+            transform: translateY(-2rem);
+  }
+  100% {
+    -webkit-transform: translateY(0rem);
+            transform: translateY(0rem);
+  }
+}
+
+header {
+  width: 100%;
+  min-height: 10vh;
+  max-height: 100%;
+  position: fixed;
+  top: 0;
+  padding: 0 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: var(--hero);
+  -webkit-box-shadow: var(--shadow-header);
+          box-shadow: var(--shadow-header);
+  z-index: 999999999999999999999999999999999999999999999999999999999999999999999999 !important;
+}
+
+header .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header .container .kanan {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .container .kanan .logo {
+  margin-right: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header .container .kanan .logo img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+header .container .kanan .logo h1 {
+  font-size: 1.4rem;
+  line-height: 22px;
+  color: var(--putih);
+  font-weight: 700;
+}
+
+header .container .kanan .logo h1 span {
+  background: -webkit-gradient(linear, left top, right top, from(var(--tw-gradient-stops)));
+  background: linear-gradient(to right, var(--tw-gradient-stops));
+  background-clip: text;
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+header .container .kanan nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .container .kanan nav ul li {
+  margin: 0 10px;
+}
+
+header .container .kanan nav ul li a {
+  font-weight: 500;
+  color: var(--putih);
+}
+
+header .container .kiri {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .container .kiri .icon {
+  margin-right: 10px;
+  color: var(--putih);
+}
+
+header .container .kiri .garis {
+  margin: 0 10px;
+  font-size: 1.4rem;
+  color: var(--putih);
+}
+
+header .container .kiri .auth a {
+  margin: 0 10px;
+  color: var(--putih);
+}
+
+header .container .kiri .profil {
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+}
+
+header .container .kiri .profil img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+header .container .kiri .menu {
+  width: 30px;
+  height: 20px;
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  cursor: pointer;
+}
+
+header .container .kiri .menu input {
+  width: 100%;
+  height: 130%;
+  position: absolute;
+  top: -3px;
+  opacity: 0;
+}
+
+header .container .kiri .menu span {
+  width: 100%;
+  height: 3px;
+  border-radius: 10px;
+  background-color: var(--putih);
+}
+
+.containerNavMobile {
+  width: 100%;
+  height: 100vh;
+  display: none;
+  position: fixed;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.containerNavMobile .navMobile {
+  width: 40%;
+  background-color: var(--putih);
+  padding-left: 20px;
+  padding-bottom: 20px;
+  padding-right: 20px;
+}
+
+.bg-gradient-to-r {
+  background: -webkit-gradient(linear, left top, right top, from(var(--tw-gradient-stops))) !important;
+  background: linear-gradient(to right, var(--tw-gradient-stops)) !important;
+  color: var(--putih);
+}
+
+@media (min-width: 1500px) {
+  .container {
+    max-width: 1500px;
+  }
+  header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media (max-width: 1100px) {
+  header {
+    padding: 0 25px;
+  }
+}
+
+@media (max-width: 900px) {
+  header .container .kanan .logo h1 {
+    font-size: 1.2rem;
+  }
+  header .container .kanan nav {
+    display: none;
+  }
+  header .container .kiri .icon {
+    margin-right: 20px;
+    font-size: 1.3rem;
+  }
+  header .container .kiri .profil {
+    margin-left: 0;
+    margin-right: 20px;
+  }
+  header .container .kiri .garis {
+    display: none;
+  }
+  header .container .kiri .auth {
+    display: none;
+  }
+  header .container .kiri .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .containerNavMobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (max-width: 600px) {
+  header {
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 500px) {
+  header .container .kanan .logo img {
+    width: 35px;
+    height: 35px;
+  }
+  header .container .kanan .logo h1 {
+    font-size: 1.1rem;
+    line-height: 20px;
+  }
+}
+
+@media (max-width: 400px) {
+  header .container .kanan .logo img {
+    display: none;
+  }
+  header .container .kiri .icon,
+  header .container .kiri .profil {
+    margin-right: 15px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
