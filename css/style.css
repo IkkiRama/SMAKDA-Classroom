@@ -16,6 +16,15 @@
   --danger: #dc3545;
   --primary: #007bff;
   --warning: #ffc107;
+  --dark: #5b5b5c;
+  --border-table: 1px solid #dee2e6;
+  --table-dark: #343a40;
+  --tr: rgba(0, 0, 0, 0.05);
+  --outline-input: #0176f4bd;
+  --outline-button: #63aeffbd;
+  --outline-warning: #ffe601f1;
+  --outline-white: rgb(207, 207, 207);
+  --outline-dark: #717172;
   --tw-gradient-to: #06b6d4;
   --tw-gradient-from: #0d6efd;
   --tw-gradient-stops: #0d6efd,
@@ -82,13 +91,20 @@
   }
 }
 
+header.scroll {
+  -webkit-box-shadow: var(--shadow-header);
+          box-shadow: var(--shadow-header);
+}
+
 header {
   width: 100%;
   min-height: 10vh;
   max-height: 100%;
+  padding: 0 100px;
+  -webkit-transition: .5s;
+  transition: .5s;
   position: fixed;
   top: 0;
-  padding: 0 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -99,8 +115,6 @@ header {
       -ms-flex-pack: center;
           justify-content: center;
   background: var(--hero);
-  -webkit-box-shadow: var(--shadow-header);
-          box-shadow: var(--shadow-header);
   z-index: 999999999999999999999999999999999999999999999999999999999999999999999999 !important;
 }
 
@@ -271,6 +285,174 @@ header .container .kiri .menu span {
   background: -webkit-gradient(linear, left top, right top, from(var(--tw-gradient-stops))) !important;
   background: linear-gradient(to right, var(--tw-gradient-stops)) !important;
   color: var(--putih);
+}
+
+.hero {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--hero);
+}
+
+.hero .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.hero .container .caption {
+  width: 60%;
+}
+
+.hero .container .caption h1 {
+  font-size: 3rem;
+  line-height: 60px;
+  color: var(--putih);
+  margin-bottom: 20px;
+}
+
+.hero .container .caption h1 span {
+  background: -webkit-gradient(linear, left top, right top, from(var(--tw-gradient-stops)));
+  background: linear-gradient(to right, var(--tw-gradient-stops));
+  background-clip: text;
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero .container .caption p {
+  font-size: 1.2rem;
+  color: var(--putih);
+  margin: 20px 0;
+}
+
+.hero .container .img {
+  width: 40%;
+}
+
+.hero .container .img img {
+  width: 100%;
+  height: 100%;
+}
+
+.series {
+  width: 100%;
+  height: 100%;
+}
+
+.series .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.series .container .perSeries {
+  width: calc(90%/3);
+  margin: 30px 10px;
+}
+
+.series .container .perSeries img {
+  width: 100%;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+  background-color: var(--putih-900);
+}
+
+.series .container .perSeries p {
+  font-size: .9rem;
+}
+
+.series .container .perSeries h2 {
+  font-size: 1rem;
+}
+
+.containerTopik {
+  width: 100%;
+  height: 100%;
+}
+
+.containerTopik .container .title {
+  text-align: center;
+}
+
+.containerTopik .container .title h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.containerTopik .container .title p {
+  font-size: 1.2rem;
+  line-height: 30px;
+}
+
+.containerTopik .container .topik {
+  width: 100%;
+  height: 100%;
+  padding: 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 50px;
+  border-radius: 10px;
+  background-color: #e7e7e7;
+}
+
+.containerTopik .container .topik .perTopik {
+  padding: 7px 20px;
+  margin: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 7px;
+  background-color: var(--putih);
+}
+
+.containerTopik .container .topik .perTopik span {
+  width: 30px;
+  height: 30px;
+  font-size: .9rem;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-right: 20px;
+  background-color: var(--putih-f2);
 }
 
 @media (min-width: 1500px) {

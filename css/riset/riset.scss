@@ -192,3 +192,22 @@ section {
 .btn-warning:focus {
     outline: 2px solid var(--outline-warning);
 }
+
+.btn-white {
+    background-color: var(--putih);
+    border-color: var(--putih);
+}
+
+.btn-white:focus {
+    outline: 2px solid var(--outline-warning);
+}
+
+.btn-dark {
+    color: var(--putih);
+    background-color: var(--dark);
+    border-color: var(--dark);
+}
+
+.btn-dark:focus {
+    outline: 2px solid var(--outline-danger);
+}
