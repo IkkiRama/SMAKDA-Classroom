@@ -1,5 +1,5 @@
 :root {
-  --shadow-header: 0 1rem 1rem rgba(0, 0, 0, 0.1);
+  --shadow-header: 0 1rem 1rem rgba(0, 0, 0, 0.2);
   --background-heroHome: linear-gradient(to top right, #450b7c, #563cc9, #49e9fb);
   --background-header: linear-gradient(to right, #450b7c, #563cc9);
   --kuningCerah: rgb(255, 160, 17);
@@ -402,8 +402,21 @@ header .container .kiri .menu span {
   background-color: var(--putih-900);
 }
 
-.series .container .perSeries p {
-  font-size: .9rem;
+.series .container .perSeries .keterangan {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.series .container .perSeries .keterangan p {
+  font-size: 1rem;
+  margin: 10px 0;
 }
 
 .series .container .perSeries h2 {
@@ -592,6 +605,32 @@ header .container .kiri .menu span {
   width: 20%;
 }
 
+.facebook {
+  background-color: #1F79FD !important;
+}
+
+.youtube {
+  background-color: #E11D48 !important;
+}
+
+.discord {
+  background-color: #6366F1 !important;
+}
+
+.instagram {
+  background: -webkit-gradient(linear, right top, left bottom, from(#7A3EBA), color-stop(#EC4899), to(#F57461)) !important;
+  background: linear-gradient(to left bottom, #7A3EBA, #EC4899, #F57461) !important;
+}
+
+.twitter {
+  background-color: #0EA5E9 !important;
+}
+
+.telegram {
+  background: -webkit-gradient(linear, left top, right bottom, from(#2EB3EF), to(#0B8DCF)) !important;
+  background: linear-gradient(to right bottom, #2EB3EF, #0B8DCF) !important;
+}
+
 .containerSosmed {
   width: 100%;
   height: 100%;
@@ -644,32 +683,6 @@ header .container .kiri .menu span {
   border-radius: 50%;
   color: var(--putih);
   background-color: var(--putih-f2);
-}
-
-.containerSosmed .container .sosmed .perSosmed .icon.facebook {
-  background-color: #1F79FD;
-}
-
-.containerSosmed .container .sosmed .perSosmed .icon.youtube {
-  background-color: #E11D48;
-}
-
-.containerSosmed .container .sosmed .perSosmed .icon.discord {
-  background-color: #6366F1;
-}
-
-.containerSosmed .container .sosmed .perSosmed .icon.instagram {
-  background: -webkit-gradient(linear, right top, left bottom, from(#7A3EBA), color-stop(#EC4899), to(#F57461));
-  background: linear-gradient(to left bottom, #7A3EBA, #EC4899, #F57461);
-}
-
-.containerSosmed .container .sosmed .perSosmed .icon.twitter {
-  background-color: #0EA5E9;
-}
-
-.containerSosmed .container .sosmed .perSosmed .icon.telegram {
-  background: -webkit-gradient(linear, left top, right bottom, from(#2EB3EF), to(#0B8DCF));
-  background: linear-gradient(to right bottom, #2EB3EF, #0B8DCF);
 }
 
 .containerClient {
@@ -858,6 +871,62 @@ footer .container {
 }
 
 /* footer end */
+.comunity {
+  width: 100%;
+  height: 100%;
+}
+
+.comunity .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.comunity .container .perComunity {
+  width: calc(90%/3);
+  height: 250px;
+  margin: 10px;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  border-radius: 10px;
+  -webkit-box-shadow: var(--shadow-header);
+          box-shadow: var(--shadow-header);
+}
+
+.comunity .container .perComunity .icon {
+  font-size: 2.5rem;
+  color: var(--putih);
+}
+
+.comunity .container .perComunity strong {
+  font-size: 1.2rem;
+}
+
+.comunity .container .perComunity p {
+  line-height: 22px;
+}
+
 @media (min-width: 1500px) {
   .container {
     max-width: 1500px;

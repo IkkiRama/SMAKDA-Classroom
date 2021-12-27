@@ -1,5 +1,5 @@
 :root {
-    --shadow-header: 0 1rem 1rem rgba(0, 0, 0, 0.1);
+    --shadow-header: 0 1rem 1rem rgba(0, 0, 0, 0.2);
     --background-heroHome: linear-gradient(to top right, #450b7c, #563cc9, #49e9fb);
     --background-header: linear-gradient(to right, #450b7c, #563cc9);
     --kuningCerah: rgb(255, 160, 17);
@@ -345,9 +345,17 @@ header {
                 background-color: var(--putih-900);
             }
 
-            p {
-                font-size: .9rem;
+            .keterangan {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                p {
+                    font-size: 1rem;
+                    margin: 10px 0;
+                }
             }
+
 
             h2 {
                 font-size: 1rem;
@@ -506,6 +514,30 @@ header {
 }
 
 
+.facebook {
+    background-color: #1F79FD !important;
+}
+
+.youtube {
+    background-color: #E11D48 !important;
+}
+
+.discord {
+    background-color: #6366F1 !important;
+}
+
+.instagram {
+    background: linear-gradient(to left bottom, #7A3EBA, #EC4899, #F57461) !important;
+}
+
+.twitter {
+    background-color: #0EA5E9 !important;
+}
+
+.telegram {
+    background: linear-gradient(to right bottom, #2EB3EF, #0B8DCF) !important;
+}
+
 .containerSosmed {
     width: 100%;
     height: 100%;
@@ -542,35 +574,12 @@ header {
                     border-radius: 50%;
                     color: var(--putih);
                     background-color: var(--putih-f2);
-
-                    &.facebook {
-                        background-color: #1F79FD;
-                    }
-
-                    &.youtube {
-                        background-color: #E11D48;
-                    }
-
-                    &.discord {
-                        background-color: #6366F1;
-                    }
-
-                    &.instagram {
-                        background: linear-gradient(to left bottom, #7A3EBA, #EC4899, #F57461);
-                    }
-
-                    &.twitter {
-                        background-color: #0EA5E9;
-                    }
-
-                    &.telegram {
-                        background: linear-gradient(to right bottom, #2EB3EF, #0B8DCF);
-                    }
                 }
             }
         }
     }
 }
+
 
 
 .containerClient {
@@ -742,6 +751,87 @@ footer .container {
 }
 
 /* footer end */
+
+
+
+
+
+
+
+
+
+
+
+// page comunity start
+.comunity {
+    width: 100%;
+    height: 100%;
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        .perComunity {
+            width: calc(90%/3);
+            height: 250px;
+            margin: 10px;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: var(--shadow-header);
+
+            .icon {
+                font-size: 2.5rem;
+                color: var(--putih);
+            }
+
+            strong {
+                font-size: 1.2rem;
+            }
+
+            p {
+                line-height: 22px;
+            }
+        }
+    }
+}
+
+
+// page comunity end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

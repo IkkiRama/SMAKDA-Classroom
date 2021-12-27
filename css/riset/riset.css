@@ -74,6 +74,14 @@ section {
   text-align: center;
 }
 
+.text-primary {
+  color: var(--primary);
+}
+
+.fw-600 {
+  font-weight: 600;
+}
+
 .overflow-x-auto {
   overflow-x: auto;
 }
