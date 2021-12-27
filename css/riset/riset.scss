@@ -130,6 +130,10 @@ section {
     margin-bottom: 100px;
 }
 
+.mt-100 {
+    margin-top: 100px;
+}
+
 .mt-20 {
     margin-top: 20px;
 }
@@ -210,4 +214,72 @@ section {
 
 .btn-dark:focus {
     outline: 2px solid var(--outline-danger);
+}
+
+
+
+
+
+
+
+.modalContainer.active {
+    transform: translateY(0);
+}
+
+.modalContainer.active {
+    transform: translateY(0);
+}
+
+.modalContainer {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    padding: 20px;
+    top: 0;
+    z-index: 99999999999999999999999999999999999999999999999999999999999999999999999999999999999999 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .5s;
+    transform: translateY(-120%);
+    background-color: rgba(0, 0, 0, 0.5);
+
+    .modal {
+        width: 50%;
+        max-height: 100%;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        border-radius: 7px;
+        border: var(--border);
+        background-color: var(--putih);
+
+        .modal-title {
+            padding: 10px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: var(--border);
+
+            .icon {
+                font-size: 1.7rem;
+                cursor: pointer;
+                transition: .1s;
+
+                &:hover {
+                    color: var(--biru-cerah);
+                }
+            }
+        }
+
+        .modal-body {
+            padding: 20px;
+            border-bottom: var(--border);
+        }
+
+        .modal-footer {
+            padding: 20px;
+        }
+    }
+
 }

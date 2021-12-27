@@ -123,6 +123,10 @@ section {
   margin-bottom: 100px;
 }
 
+.mt-100 {
+  margin-top: 100px;
+}
+
 .mt-20 {
   margin-top: 20px;
 }
@@ -198,5 +202,88 @@ section {
 
 .btn-dark:focus {
   outline: 2px solid var(--outline-danger);
+}
+
+.modalContainer.active {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.modalContainer.active {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.modalContainer {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  padding: 20px;
+  top: 0;
+  z-index: 99999999999999999999999999999999999999999999999999999999999999999999999999999999999999 !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: .5s;
+  transition: .5s;
+  -webkit-transform: translateY(-120%);
+          transform: translateY(-120%);
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modalContainer .modal {
+  width: 50%;
+  max-height: 100%;
+  overflow-y: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 7px;
+  border: var(--border);
+  background-color: var(--putih);
+}
+
+.modalContainer .modal .modal-title {
+  padding: 10px 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: var(--border);
+}
+
+.modalContainer .modal .modal-title .icon {
+  font-size: 1.7rem;
+  cursor: pointer;
+  -webkit-transition: .1s;
+  transition: .1s;
+}
+
+.modalContainer .modal .modal-title .icon:hover {
+  color: var(--biru-cerah);
+}
+
+.modalContainer .modal .modal-body {
+  padding: 20px;
+  border-bottom: var(--border);
+}
+
+.modalContainer .modal .modal-footer {
+  padding: 20px;
 }
 /*# sourceMappingURL=riset.css.map */

@@ -87,6 +87,28 @@
     }
 }
 
+.searchBox {
+
+    form {
+        margin-bottom: 20px;
+    }
+
+    form .form-group .input-group button {
+        width: 20%;
+    }
+
+    .suggesti {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+
+        .perSuggesti {
+            padding: 5px;
+        }
+    }
+}
+
 
 header.scroll {
     box-shadow: var(--shadow-header);
@@ -104,7 +126,7 @@ header {
     align-items: center;
     justify-content: center;
     background: var(--hero);
-    z-index: 999999999999999999999999999999999999999999999999999999999999999999999999 !important;
+    z-index: 999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999 !important;
 
     .container {
         display: flex;
@@ -168,6 +190,7 @@ header {
             .icon {
                 margin-right: 10px;
                 color: var(--putih);
+                cursor: pointer;
             }
 
             .garis {
@@ -335,26 +358,32 @@ header {
 }
 
 
+.title {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    h1 {
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+
+    p {
+        font-size: 1.2rem;
+        line-height: 30px;
+    }
+}
+
+
 .containerTopik {
     width: 100%;
     height: 100%;
 
     .container {
 
-        .title {
-            text-align: center;
-
-            h1 {
-                font-size: 2rem;
-                font-weight: 600;
-                margin-bottom: 10px;
-            }
-
-            p {
-                font-size: 1.2rem;
-                line-height: 30px;
-            }
-        }
 
         .topik {
             width: 100%;
@@ -378,8 +407,7 @@ header {
                 background-color: var(--putih);
 
                 span {
-                    width: 30px;
-                    height: 30px;
+                    padding: 10px;
                     font-size: .9rem;
                     border-radius: 50%;
                     display: flex;
@@ -392,6 +420,265 @@ header {
         }
     }
 }
+
+
+.search {
+    width: 100%;
+    height: 100%;
+    background-color: var(--putih-f2);
+
+    .container {
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 500;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .searchAlert {
+            font-size: .9rem;
+        }
+
+        form {
+
+            .form-group {
+                width: 700px;
+
+                button {
+                    width: 20%;
+                }
+            }
+        }
+    }
+}
+
+
+.containerSosmed {
+    width: 100%;
+    height: 100%;
+
+    .container {
+
+        .sosmed {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: 30px;
+
+            .perSosmed {
+                width: calc(90%/3);
+                display: flex;
+                align-items: center;
+                margin: 20px 0;
+
+                p {
+                    font-size: .9rem;
+                    margin-top: 10px;
+                }
+
+                .icon {
+                    // width: 50px;
+                    // height: 50px;
+                    padding: 10px;
+                    font-size: 1.3rem;
+                    margin-right: 20px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 50%;
+                    background-color: var(--putih-f2);
+                }
+            }
+        }
+    }
+}
+
+
+.containerClient {
+    width: 100%;
+    border-top-left-radius: 100px;
+    background-color: var(--biru-cerah);
+}
+
+.containerClient .clientTitle {
+    display: flex;
+    align-items: center;
+}
+
+
+.containerClient .clientTitle h2 {
+    font-size: 2rem;
+    margin-right: 100px;
+    color: var(--putih);
+}
+
+.containerClient .clientTitle p {
+    max-width: 630px;
+    font-size: 1.4rem;
+    color: var(--putih);
+}
+
+
+
+.containerKerjasama {
+    width: 100%;
+    padding: 0;
+    background-color: var(--biru-cerah);
+}
+
+.containerKerjasama .container {
+    width: 95%;
+    padding: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--hero);
+    // background-color: #221E41;
+    border-top-right-radius: 100px;
+}
+
+.containerKerjasama .container .caption {
+    width: 45%;
+}
+
+.containerKerjasama .container .caption h2 {
+    color: var(--putih);
+    letter-spacing: .5px;
+    line-height: 50px;
+    font-size: 2.3rem;
+    margin-bottom: 20px;
+}
+
+.containerKerjasama .container .caption p {
+    color: var(--putih);
+    font-size: 1.2rem;
+    letter-spacing: .5px;
+    line-height: 27px;
+}
+
+
+
+
+
+
+/* footer start */
+.footer {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    background-color: var(--biru-cerah);
+    /* box-shadow: .5rem 0 1rem rgba(0, 0, 0, 0.1); */
+}
+
+.footer .container {
+    width: 95%;
+    padding: 0 100px;
+    padding-bottom: 100px;
+    background-color: var(--hero);
+    // background-color: #221E41;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer .box {
+    flex: 1 1 15rem;
+    margin: 1rem;
+}
+
+.footer .box .logo {
+    display: flex;
+    align-items: center;
+}
+
+.footer .box .logo img {
+    width: 30px;
+    height: 30px;
+    margin-right: 20px;
+}
+
+.footer .box h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 1rem 0;
+    color: var(--putih);
+}
+
+.footer .box p {
+    font-size: 1rem;
+    padding: .5rem 0;
+    line-height: 25px;
+    margin-bottom: 30px;
+    color: var(--putih);
+}
+
+.footer .box .sosmed {
+    display: flex;
+}
+
+
+.footer .box .sosmed .perSosmed {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    padding: 10px;
+    font-size: 1.5rem;
+    margin: 0 10px;
+    border-radius: 50%;
+    background: rgb(255, 160, 17);
+}
+
+.footer .box .sosmed .perSosmed:hover {
+    transform: rotate(360deg);
+    transition: 1s;
+}
+
+
+.footer .box a {
+    font-size: 1rem;
+    padding: .5rem 0;
+    display: flex;
+    color: var(--putih);
+}
+
+.footer .box a:hover {
+    text-decoration: underline;
+}
+
+
+
+footer {
+    width: 100%;
+    height: 8vh;
+    background-color: var(--biru-cerah);
+    color: var(--putih);
+}
+
+footer .container {
+    width: 95%;
+    padding-left: 100px;
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    text-align: left;
+    background-color: var(--hero);
+    // background-color: #221E41;
+}
+
+/* footer end */
+
 
 
 @media(min-width:1500px) {

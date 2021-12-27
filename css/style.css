@@ -91,6 +91,34 @@
   }
 }
 
+.searchBox form {
+  margin-bottom: 20px;
+}
+
+.searchBox form .form-group .input-group button {
+  width: 20%;
+}
+
+.searchBox .suggesti {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.searchBox .suggesti .perSuggesti {
+  padding: 5px;
+}
+
 header.scroll {
   -webkit-box-shadow: var(--shadow-header);
           box-shadow: var(--shadow-header);
@@ -115,7 +143,7 @@ header {
       -ms-flex-pack: center;
           justify-content: center;
   background: var(--hero);
-  z-index: 999999999999999999999999999999999999999999999999999999999999999999999999 !important;
+  z-index: 999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999 !important;
 }
 
 header .container {
@@ -202,6 +230,7 @@ header .container .kiri {
 header .container .kiri .icon {
   margin-right: 10px;
   color: var(--putih);
+  cursor: pointer;
 }
 
 header .container .kiri .garis {
@@ -381,24 +410,37 @@ header .container .kiri .menu span {
   font-size: 1rem;
 }
 
-.containerTopik {
-  width: 100%;
-  height: 100%;
-}
-
-.containerTopik .container .title {
+.title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-.containerTopik .container .title h1 {
+.title h1 {
   font-size: 2rem;
   font-weight: 600;
   margin-bottom: 10px;
 }
 
-.containerTopik .container .title p {
+.title p {
   font-size: 1.2rem;
   line-height: 30px;
+}
+
+.containerTopik {
+  width: 100%;
+  height: 100%;
 }
 
 .containerTopik .container .topik {
@@ -438,8 +480,7 @@ header .container .kiri .menu span {
 }
 
 .containerTopik .container .topik .perTopik span {
-  width: 30px;
-  height: 30px;
+  padding: 10px;
   font-size: .9rem;
   border-radius: 50%;
   display: -webkit-box;
@@ -455,6 +496,300 @@ header .container .kiri .menu span {
   background-color: var(--putih-f2);
 }
 
+.search {
+  width: 100%;
+  height: 100%;
+  background-color: var(--putih-f2);
+}
+
+.search .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.search .container h1 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.search .container p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.search .container .searchAlert {
+  font-size: .9rem;
+}
+
+.search .container form .form-group {
+  width: 700px;
+}
+
+.search .container form .form-group button {
+  width: 20%;
+}
+
+.containerSosmed {
+  width: 100%;
+  height: 100%;
+}
+
+.containerSosmed .container .sosmed {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.containerSosmed .container .sosmed .perSosmed {
+  width: calc(90%/3);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 20px 0;
+}
+
+.containerSosmed .container .sosmed .perSosmed p {
+  font-size: .9rem;
+  margin-top: 10px;
+}
+
+.containerSosmed .container .sosmed .perSosmed .icon {
+  padding: 10px;
+  font-size: 1.3rem;
+  margin-right: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 50%;
+  background-color: var(--putih-f2);
+}
+
+.containerClient {
+  width: 100%;
+  border-top-left-radius: 100px;
+  background-color: var(--biru-cerah);
+}
+
+.containerClient .clientTitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.containerClient .clientTitle h2 {
+  font-size: 2rem;
+  margin-right: 100px;
+  color: var(--putih);
+}
+
+.containerClient .clientTitle p {
+  max-width: 630px;
+  font-size: 1.4rem;
+  color: var(--putih);
+}
+
+.containerKerjasama {
+  width: 100%;
+  padding: 0;
+  background-color: var(--biru-cerah);
+}
+
+.containerKerjasama .container {
+  width: 95%;
+  padding: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: var(--hero);
+  border-top-right-radius: 100px;
+}
+
+.containerKerjasama .container .caption {
+  width: 45%;
+}
+
+.containerKerjasama .container .caption h2 {
+  color: var(--putih);
+  letter-spacing: .5px;
+  line-height: 50px;
+  font-size: 2.3rem;
+  margin-bottom: 20px;
+}
+
+.containerKerjasama .container .caption p {
+  color: var(--putih);
+  font-size: 1.2rem;
+  letter-spacing: .5px;
+  line-height: 27px;
+}
+
+/* footer start */
+.footer {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  background-color: var(--biru-cerah);
+  /* box-shadow: .5rem 0 1rem rgba(0, 0, 0, 0.1); */
+}
+
+.footer .container {
+  width: 95%;
+  padding: 0 100px;
+  padding-bottom: 100px;
+  background-color: var(--hero);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.footer .box {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 15rem;
+          flex: 1 1 15rem;
+  margin: 1rem;
+}
+
+.footer .box .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer .box .logo img {
+  width: 30px;
+  height: 30px;
+  margin-right: 20px;
+}
+
+.footer .box h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 1rem 0;
+  color: var(--putih);
+}
+
+.footer .box p {
+  font-size: 1rem;
+  padding: .5rem 0;
+  line-height: 25px;
+  margin-bottom: 30px;
+  color: var(--putih);
+}
+
+.footer .box .sosmed {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer .box .sosmed .perSosmed {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 45px;
+  height: 45px;
+  padding: 10px;
+  font-size: 1.5rem;
+  margin: 0 10px;
+  border-radius: 50%;
+  background: #ffa011;
+}
+
+.footer .box .sosmed .perSosmed:hover {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.footer .box a {
+  font-size: 1rem;
+  padding: .5rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: var(--putih);
+}
+
+.footer .box a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  width: 100%;
+  height: 8vh;
+  background-color: var(--biru-cerah);
+  color: var(--putih);
+}
+
+footer .container {
+  width: 95%;
+  padding-left: 100px;
+  font-size: 1.1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: left;
+  background-color: var(--hero);
+}
+
+/* footer end */
 @media (min-width: 1500px) {
   .container {
     max-width: 1500px;
