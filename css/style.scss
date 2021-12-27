@@ -1,5 +1,5 @@
 :root {
-    --shadow-header: 0 1rem 1rem rgba(0, 0, 0, 0.2);
+    --shadow-header: 0 1rem 1rem rgba(0, 0, 0, 0.1);
     --background-heroHome: linear-gradient(to top right, #450b7c, #563cc9, #49e9fb);
     --background-header: linear-gradient(to right, #450b7c, #563cc9);
     --kuningCerah: rgb(255, 160, 17);
@@ -180,7 +180,11 @@ header {
 
                         a {
                             font-weight: 500;
-                            color: var(--putih);
+                            color: rgb(218, 218, 218);
+
+                            &.active {
+                                color: var(--putih);
+                            }
                         }
                     }
                 }
@@ -440,11 +444,11 @@ header {
     }
 }
 
-.containerTestimoni {
+.containerFAQ {
     width: 100%;
     height: 100%;
 
-    .container .testimoni {
+    .container .FAQ {
         width: 100%;
         height: 100%;
         display: flex;
@@ -458,17 +462,34 @@ header {
             height: 100%;
             margin: 0 10px;
 
-            .perTestimoni {
+            .perFAQ {
                 width: 100%;
                 height: 100%;
 
-                p {
+                .pertanyaan {
                     padding: 20px;
                     cursor: pointer;
-                    font-weight: 600;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
                     border-radius: 7px;
                     border-bottom: var(--border);
                     background-color: var(--putih-900);
+
+                    p {
+                        font-weight: 600;
+                    }
+
+                    .icon {
+                        color: var(--hitam-santai);
+                        fill: var(--hitam-santai);
+                        font-size: 1.4rem;
+                        transition: .5s;
+                    }
+
+                    .icon.active {
+                        transform: rotate(180deg);
+                    }
                 }
 
                 .jawaban {

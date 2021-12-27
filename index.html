@@ -35,7 +35,7 @@
 
                 <nav>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html" class="active">Home</a></li>
                         <li><a href="series.html">Series</a></li>
                         <li><a href="artikel.html">Artikel</a></li>
                         <li><a href="community.html">Community</a></li>
@@ -323,7 +323,7 @@
         </section>
 
 
-        <section class="containerTestimoni mt-100">
+        <section class="containerFAQ mt-100">
             <div class="container">
                 <div class="title">
                     <h1>FAQ</h1>
@@ -332,10 +332,16 @@
                     </p>
                 </div>
 
-                <div class="testimoni">
+                <div class="FAQ">
                     <div class="kanan">
-                        <div class="perTestimoni">
-                            <p>Yang ngajar siapa ?</p>
+                        <div class="perFAQ">
+                            <div class="pertanyaan">
+                                <p>Yang ngajar siapa ?</p>
+
+                                <div class="icon">
+                                    <i class="fas fa-angle-down"></i>
+                                </div>
+                            </div>
 
                             <div class="jawaban">
                                 Untuk setiap series-nya tersendiri, kami mengambil dari Youtube semua. Tapi untuk
@@ -345,8 +351,13 @@
                             </div>
                         </div>
 
-                        <div class="perTestimoni">
-                            <p>Apakah semuanya gratis ?</p>
+                        <div class="perFAQ">
+                            <div class="pertanyaan">
+                                <p>Apakah semuanya gratis ?</p>
+                                <div class="icon">
+                                    <i class="fas fa-angle-down"></i>
+                                </div>
+                            </div>
 
                             <div class="jawaban">
                                 Iya, semua yang ada disini <strong>GRATIS</strong> tidak dipungut biaya sepeserpun, tapi
@@ -358,8 +369,13 @@
                     </div>
                     <div class="kiri">
 
-                        <div class="perTestimoni">
-                            <p>Bagaimana cara saya mengapresiasinya ?</p>
+                        <div class="perFAQ">
+                            <div class="pertanyaan">
+                                <p>Bagaimana cara saya mengapresiasinya ?</p>
+                                <div class="icon">
+                                    <i class="fas fa-angle-down"></i>
+                                </div>
+                            </div>
 
                             <div class="jawaban">
                                 Kamu hanya cukup belajar yang tekun dan kembangkan bakat kamu, dan <strong>HARUS JUARA
@@ -367,8 +383,13 @@
                             </div>
                         </div>
 
-                        <div class="perTestimoni">
-                            <p>Ada sosial media ?</p>
+                        <div class="perFAQ">
+                            <div class="pertanyaan">
+                                <p>Ada sosial media ?</p>
+                                <div class="icon">
+                                    <i class="fas fa-angle-down"></i>
+                                </div>
+                            </div>
 
                             <div class="jawaban">
                                 Tentu saja ada, Telegram, Twitter, Facebook, Instagram, Discord
@@ -659,10 +680,11 @@
     </div>
 
     <script>
-        let testimoni = document.querySelectorAll(".perTestimoni p")
-        testimoni.forEach(perTestimoni => {
-            perTestimoni.addEventListener("click", () => {
-                perTestimoni.nextElementSibling.classList.toggle("show")
+        let FAQ_icon = document.querySelectorAll(".perFAQ .pertanyaan .icon")
+        FAQ_icon.forEach(perFAQ => {
+            perFAQ.parentElement.addEventListener("click", () => {
+                perFAQ.classList.toggle("active")
+                perFAQ.parentElement.nextElementSibling.classList.toggle("show")
             })
         })
     </script>

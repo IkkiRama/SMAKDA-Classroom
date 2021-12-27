@@ -1,5 +1,5 @@
 :root {
-  --shadow-header: 0 1rem 1rem rgba(0, 0, 0, 0.2);
+  --shadow-header: 0 1rem 1rem rgba(0, 0, 0, 0.1);
   --background-heroHome: linear-gradient(to top right, #450b7c, #563cc9, #49e9fb);
   --background-header: linear-gradient(to right, #450b7c, #563cc9);
   --kuningCerah: rgb(255, 160, 17);
@@ -218,6 +218,10 @@ header .container .kanan nav ul li {
 
 header .container .kanan nav ul li a {
   font-weight: 500;
+  color: #dadada;
+}
+
+header .container .kanan nav ul li a.active {
   color: var(--putih);
 }
 
@@ -517,12 +521,12 @@ header .container .kiri .menu span {
   background-color: var(--putih-f2);
 }
 
-.containerTestimoni {
+.containerFAQ {
   width: 100%;
   height: 100%;
 }
 
-.containerTestimoni .container .testimoni {
+.containerFAQ .container .FAQ {
   width: 100%;
   height: 100%;
   display: -webkit-box;
@@ -534,37 +538,65 @@ header .container .kiri .menu span {
           justify-content: space-between;
 }
 
-.containerTestimoni .container .testimoni .kiri,
-.containerTestimoni .container .testimoni .kanan {
+.containerFAQ .container .FAQ .kiri,
+.containerFAQ .container .FAQ .kanan {
   width: 50%;
   height: 100%;
   margin: 0 10px;
 }
 
-.containerTestimoni .container .testimoni .kiri .perTestimoni,
-.containerTestimoni .container .testimoni .kanan .perTestimoni {
+.containerFAQ .container .FAQ .kiri .perFAQ,
+.containerFAQ .container .FAQ .kanan .perFAQ {
   width: 100%;
   height: 100%;
 }
 
-.containerTestimoni .container .testimoni .kiri .perTestimoni p,
-.containerTestimoni .container .testimoni .kanan .perTestimoni p {
+.containerFAQ .container .FAQ .kiri .perFAQ .pertanyaan,
+.containerFAQ .container .FAQ .kanan .perFAQ .pertanyaan {
   padding: 20px;
   cursor: pointer;
-  font-weight: 600;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   border-radius: 7px;
   border-bottom: var(--border);
   background-color: var(--putih-900);
 }
 
-.containerTestimoni .container .testimoni .kiri .perTestimoni .jawaban,
-.containerTestimoni .container .testimoni .kanan .perTestimoni .jawaban {
+.containerFAQ .container .FAQ .kiri .perFAQ .pertanyaan p,
+.containerFAQ .container .FAQ .kanan .perFAQ .pertanyaan p {
+  font-weight: 600;
+}
+
+.containerFAQ .container .FAQ .kiri .perFAQ .pertanyaan .icon,
+.containerFAQ .container .FAQ .kanan .perFAQ .pertanyaan .icon {
+  color: var(--hitam-santai);
+  fill: var(--hitam-santai);
+  font-size: 1.4rem;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.containerFAQ .container .FAQ .kiri .perFAQ .pertanyaan .icon.active,
+.containerFAQ .container .FAQ .kanan .perFAQ .pertanyaan .icon.active {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.containerFAQ .container .FAQ .kiri .perFAQ .jawaban,
+.containerFAQ .container .FAQ .kanan .perFAQ .jawaban {
   padding: 20px;
   display: none;
 }
 
-.containerTestimoni .container .testimoni .kiri .perTestimoni .jawaban.show,
-.containerTestimoni .container .testimoni .kanan .perTestimoni .jawaban.show {
+.containerFAQ .container .FAQ .kiri .perFAQ .jawaban.show,
+.containerFAQ .container .FAQ .kanan .perFAQ .jawaban.show {
   display: inline-block;
 }
 
