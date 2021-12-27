@@ -16,7 +16,11 @@
   --danger: #dc3545;
   --primary: #007bff;
   --warning: #ffc107;
-  --dark: #5b5b5c;
+  --dark: rgb(55 65 81);
+  --danger-hover: #c52939;
+  --primary-hover: #0070e7;
+  --warning-hover: #e2ab06;
+  --dark-hover: #2F3949;
   --border-table: 1px solid #dee2e6;
   --table-dark: #343a40;
   --tr: rgba(0, 0, 0, 0.05);
@@ -492,6 +496,10 @@ header .container .kiri .menu span {
   background-color: var(--putih);
 }
 
+.containerTopik .container .topik .perTopik:hover p {
+  color: var(--biru-cerah);
+}
+
 .containerTopik .container .topik .perTopik span {
   padding: 10px;
   font-size: .9rem;
@@ -925,6 +933,186 @@ footer .container {
 
 .comunity .container .perComunity p {
   line-height: 22px;
+}
+
+.heroDetailKelas {
+  width: 100%;
+  height: 100vh;
+  max-height: 100%;
+  background-color: var(--hero);
+}
+
+.heroDetailKelas .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.heroDetailKelas .container .caption {
+  width: 60%;
+}
+
+.heroDetailKelas .container .caption h1 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: var(--putih);
+}
+
+.heroDetailKelas .container .caption p {
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 30px;
+  color: var(--putih);
+}
+
+.heroDetailKelas .container .caption .keterangan {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 30px 0;
+}
+
+.heroDetailKelas .container .caption .keterangan .perKeterangan {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.heroDetailKelas .container .caption .keterangan .perKeterangan .icon {
+  width: 20px;
+  height: 20px;
+  color: var(--putih);
+  fill: var(--putih);
+  margin-right: 10px;
+}
+
+.heroDetailKelas .container .caption a {
+  padding: 12px 25px;
+}
+
+.heroDetailKelas .container img {
+  width: 40%;
+  height: 300px;
+  background-size: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-left: 20px;
+  border-radius: 20px;
+}
+
+.detailKelas .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.detailKelas .container h2 {
+  font-size: 1.5rem;
+  color: var(--biru-cerah);
+  margin-bottom: 20px;
+}
+
+.detailKelas .container .tentangKelas {
+  width: 70%;
+  margin-right: 20px;
+}
+
+.detailKelas .container .tentangKelas .perTentangKelas {
+  padding: 30px 20px;
+  margin: 20px 0;
+  border-radius: 10px;
+  border: var(--border);
+  background-color: var(--putih);
+}
+
+.detailKelas .container .tentangKelas .perTentangKelas p {
+  line-height: 30px;
+  font-weight: 450;
+}
+
+.detailKelas .container .tentangKelas .perTentangKelas .materi p {
+  padding: 20px;
+  margin: 10px 0;
+  font-weight: 550;
+  border-radius: 10px;
+  background-color: #EFF2F6;
+}
+
+.detailKelas .container .infoKelas {
+  width: 30%;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 11vh;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.detailKelas .container .infoKelas .perInfoKelas {
+  padding: 30px 20px;
+  margin: 20px 0;
+  border-radius: 10px;
+  border: var(--border);
+  background-color: var(--putih);
+}
+
+.detailKelas .container .infoKelas .perInfoKelas .infoMateri {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 20px;
+  margin: 10px 0;
+  font-weight: 500;
+  border-radius: 10px;
+  background-color: #EFF2F6;
+}
+
+.detailKelas .container .infoKelas .perInfoKelas .infoMateri img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.detailKelas .container .infoKelas .perInfoKelas .mentor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+}
+
+.detailKelas .container .infoKelas .perInfoKelas .mentor img {
+  width: 50px;
+  height: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.detailKelas .container .infoKelas .perInfoKelas .mentor p {
+  font-weight: 500;
 }
 
 @media (min-width: 1500px) {

@@ -90,6 +90,7 @@ section {
     font-weight: 600;
 }
 
+
 .overflow-x-auto {
     overflow-x: auto;
 }
@@ -124,6 +125,10 @@ section {
 
 .ml-20 {
     margin-left: 20px;
+}
+
+.mr-10 {
+    margin-right: 10px;
 }
 
 .mr-20 {
@@ -185,6 +190,10 @@ section {
     border-color: var(--danger);
 }
 
+.btn-danger:hover {
+    background-color: var(--danger-hover);
+}
+
 .btn-danger:focus {
     outline: 2px solid var(--outline-danger);
 }
@@ -196,9 +205,17 @@ section {
     border-color: var(--primary);
 }
 
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+}
+
 .btn-warning {
     background-color: var(--warning);
     border-color: var(--warning);
+}
+
+.btn-warning:hover {
+    background-color: var(--warning-hover);
 }
 
 .btn-warning:focus {
@@ -220,8 +237,12 @@ section {
     border-color: var(--dark);
 }
 
+.btn-dark:hover {
+    background-color: var(--dark-hover);
+}
+
 .btn-dark:focus {
-    outline: 2px solid var(--outline-danger);
+    outline: 2px solid var(--outline-dark);
 }
 
 
