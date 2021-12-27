@@ -421,6 +421,50 @@ header {
     }
 }
 
+.containerTestimoni {
+    width: 100%;
+    height: 100%;
+
+    .container .testimoni {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        // align-items: center;
+        margin-top: 50px;
+        justify-content: space-between;
+
+        .kiri,
+        .kanan {
+            width: 50%;
+            height: 100%;
+            margin: 0 10px;
+
+            .perTestimoni {
+                width: 100%;
+                height: 100%;
+
+                p {
+                    padding: 20px;
+                    cursor: pointer;
+                    font-weight: 600;
+                    border-radius: 7px;
+                    border-bottom: var(--border);
+                    background-color: var(--putih-900);
+                }
+
+                .jawaban {
+                    padding: 20px;
+                    display: none;
+
+                    &.show {
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+    }
+}
+
 
 .search {
     width: 100%;
@@ -496,7 +540,32 @@ header {
                     align-items: center;
                     justify-content: center;
                     border-radius: 50%;
+                    color: var(--putih);
                     background-color: var(--putih-f2);
+
+                    &.facebook {
+                        background-color: #1F79FD;
+                    }
+
+                    &.youtube {
+                        background-color: #E11D48;
+                    }
+
+                    &.discord {
+                        background-color: #6366F1;
+                    }
+
+                    &.instagram {
+                        background: linear-gradient(to left bottom, #7A3EBA, #EC4899, #F57461);
+                    }
+
+                    &.twitter {
+                        background-color: #0EA5E9;
+                    }
+
+                    &.telegram {
+                        background: linear-gradient(to right bottom, #2EB3EF, #0B8DCF);
+                    }
                 }
             }
         }
@@ -595,16 +664,6 @@ header {
     margin: 1rem;
 }
 
-.footer .box .logo {
-    display: flex;
-    align-items: center;
-}
-
-.footer .box .logo img {
-    width: 30px;
-    height: 30px;
-    margin-right: 20px;
-}
 
 .footer .box h2 {
     font-size: 2rem;
@@ -619,6 +678,11 @@ header {
     line-height: 25px;
     margin-bottom: 30px;
     color: var(--putih);
+}
+
+.footer .box p .pencipta {
+    padding: 0;
+    display: inline-block;
 }
 
 .footer .box .sosmed {

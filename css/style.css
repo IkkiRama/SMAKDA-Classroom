@@ -496,6 +496,57 @@ header .container .kiri .menu span {
   background-color: var(--putih-f2);
 }
 
+.containerTestimoni {
+  width: 100%;
+  height: 100%;
+}
+
+.containerTestimoni .container .testimoni {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 50px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.containerTestimoni .container .testimoni .kiri,
+.containerTestimoni .container .testimoni .kanan {
+  width: 50%;
+  height: 100%;
+  margin: 0 10px;
+}
+
+.containerTestimoni .container .testimoni .kiri .perTestimoni,
+.containerTestimoni .container .testimoni .kanan .perTestimoni {
+  width: 100%;
+  height: 100%;
+}
+
+.containerTestimoni .container .testimoni .kiri .perTestimoni p,
+.containerTestimoni .container .testimoni .kanan .perTestimoni p {
+  padding: 20px;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 7px;
+  border-bottom: var(--border);
+  background-color: var(--putih-900);
+}
+
+.containerTestimoni .container .testimoni .kiri .perTestimoni .jawaban,
+.containerTestimoni .container .testimoni .kanan .perTestimoni .jawaban {
+  padding: 20px;
+  display: none;
+}
+
+.containerTestimoni .container .testimoni .kiri .perTestimoni .jawaban.show,
+.containerTestimoni .container .testimoni .kanan .perTestimoni .jawaban.show {
+  display: inline-block;
+}
+
 .search {
   width: 100%;
   height: 100%;
@@ -591,7 +642,34 @@ header .container .kiri .menu span {
       -ms-flex-pack: center;
           justify-content: center;
   border-radius: 50%;
+  color: var(--putih);
   background-color: var(--putih-f2);
+}
+
+.containerSosmed .container .sosmed .perSosmed .icon.facebook {
+  background-color: #1F79FD;
+}
+
+.containerSosmed .container .sosmed .perSosmed .icon.youtube {
+  background-color: #E11D48;
+}
+
+.containerSosmed .container .sosmed .perSosmed .icon.discord {
+  background-color: #6366F1;
+}
+
+.containerSosmed .container .sosmed .perSosmed .icon.instagram {
+  background: -webkit-gradient(linear, right top, left bottom, from(#7A3EBA), color-stop(#EC4899), to(#F57461));
+  background: linear-gradient(to left bottom, #7A3EBA, #EC4899, #F57461);
+}
+
+.containerSosmed .container .sosmed .perSosmed .icon.twitter {
+  background-color: #0EA5E9;
+}
+
+.containerSosmed .container .sosmed .perSosmed .icon.telegram {
+  background: -webkit-gradient(linear, left top, right bottom, from(#2EB3EF), to(#0B8DCF));
+  background: linear-gradient(to right bottom, #2EB3EF, #0B8DCF);
 }
 
 .containerClient {
@@ -690,21 +768,6 @@ header .container .kiri .menu span {
   margin: 1rem;
 }
 
-.footer .box .logo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.footer .box .logo img {
-  width: 30px;
-  height: 30px;
-  margin-right: 20px;
-}
-
 .footer .box h2 {
   font-size: 2rem;
   font-weight: 600;
@@ -718,6 +781,11 @@ header .container .kiri .menu span {
   line-height: 25px;
   margin-bottom: 30px;
   color: var(--putih);
+}
+
+.footer .box p .pencipta {
+  padding: 0;
+  display: inline-block;
 }
 
 .footer .box .sosmed {
