@@ -3,6 +3,7 @@
   --background-heroHome: linear-gradient(to top right, #450b7c, #563cc9, #49e9fb);
   --background-header: linear-gradient(to right, #450b7c, #563cc9);
   --kuningCerah: rgb(255, 160, 17);
+  --putih-mandan-ireng: rgb(231, 231, 231);
   --hero: #111827;
   --hitam-santai: #302f2f;
   --putih: #fff;
@@ -481,7 +482,7 @@ header .container .kiri .menu span {
       flex-wrap: wrap;
   margin-top: 50px;
   border-radius: 10px;
-  background-color: #e7e7e7;
+  background-color: var(--putih-mandan-ireng);
 }
 
 .containerTopik .container .topik .perTopik {
@@ -700,6 +701,10 @@ header .container .kiri .menu span {
       -ms-flex-align: center;
           align-items: center;
   margin: 20px 0;
+}
+
+.containerSosmed .container .sosmed .perSosmed:hover strong {
+  color: var(--biru-cerah);
 }
 
 .containerSosmed .container .sosmed .perSosmed p {
@@ -1080,9 +1085,21 @@ footer .container {
   font-weight: 450;
 }
 
-.detailKelas .container .tentangKelas .perTentangKelas .materi p {
+.detailKelas .container .tentangKelas .perTentangKelas .materi {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.detailKelas .container .tentangKelas .perTentangKelas .materi a {
+  width: 100%;
   padding: 20px;
-  margin: 10px 0;
+  margin: 5px 0;
   font-weight: 550;
   border-radius: 10px;
   background-color: #EFF2F6;
@@ -1174,8 +1191,12 @@ footer .container {
 }
 
 .containerMateri .container .detailMateri {
-  width: 70%;
+  width: 65%;
   margin-right: 20px;
+}
+
+.containerMateri .container .detailMateri > * {
+  margin: 20px 0;
 }
 
 .containerMateri .container .detailMateri .infoMateri {
@@ -1258,20 +1279,190 @@ footer .container {
   margin: 5px 0;
 }
 
-.containerMateri .container .detailMateri > * {
+.containerMateri .container .detailMateri .komentar {
+  width: 100%;
+  height: 100%;
+  margin-top: 50px;
+}
+
+.containerMateri .container .detailMateri .komentar .tulisKomentar {
+  width: 100%;
+  padding: 15px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 50px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 7px;
+  border: 2px dashed rgba(0, 0, 0, 0.1);
+  background-color: var(--putih);
+}
+
+.containerMateri .container .detailMateri .komentar .tulisKomentar img {
+  width: 35px;
+  height: 35px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  margin-right: 15px;
+  background-color: var(--putih-900);
+}
+
+.containerMateri .container .detailMateri .komentar .perKomentar {
+  width: 100%;
+  margin-top: 30px;
+}
+
+.containerMateri .container .detailMateri .komentar .perKomentar .balasan {
+  margin-top: 20px;
+  margin-left: 50px;
+}
+
+.containerMateri .container .detailMateri .komentar .perKomentar .profil {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.containerMateri .container .detailMateri .komentar .perKomentar .profil img {
+  width: 40px;
+  height: 40px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  margin-right: 15px;
+  background-color: var(--putih-900);
+}
+
+.containerMateri .container .detailMateri .komentar .perKomentar .profil .caption {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.containerMateri .container .detailMateri .komentar .perKomentar .profil .caption .nama {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.containerMateri .container .detailMateri .komentar .perKomentar .profil .caption .nama svg {
+  color: var(--biru-cerah);
+  margin-left: 10px;
+}
+
+.containerMateri .container .detailMateri .komentar .perKomentar .profil .caption span {
+  font-size: .9rem;
+}
+
+.containerMateri .container .detailMateri .komentar .perKomentar .isiKomentar {
   margin: 20px 0;
 }
 
+.containerMateri .container .detailMateri .komentar .perKomentar .cta {
+  width: 100%;
+  height: 100%;
+  padding: 7px 20px;
+  border-radius: 7px;
+  background-color: var(--putih-mandan-ireng);
+}
+
 .containerMateri .container .KeteranganSeries {
-  width: 30%;
-  background-color: red;
+  width: 35%;
+  height: 100vh;
+  top: 15vh;
+  position: -webkit-sticky;
+  position: sticky;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.containerMateri .container .KeteranganSeries > * {
+  width: 100%;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 10px;
+  border: var(--border);
+}
+
+.containerMateri .container .KeteranganSeries .titleSeries h2 {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.containerMateri .container .KeteranganSeries .titleSeries p {
+  font-size: .9rem;
+}
+
+.containerMateri .container .KeteranganSeries .detailSeries {
+  height: 400px;
+  padding: 0;
+  overflow-y: auto;
+}
+
+.containerMateri .container .KeteranganSeries .detailSeries .perEpisode {
+  width: 100%;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.containerMateri .container .KeteranganSeries .detailSeries .perEpisode.active {
+  background-color: var(--biru-cerah) !important;
+}
+
+.containerMateri .container .KeteranganSeries .detailSeries .perEpisode.active p {
+  color: var(--putih);
+}
+
+.containerMateri .container .KeteranganSeries .detailSeries .perEpisode.active .icon {
+  color: var(--biru-cerah);
+}
+
+.containerMateri .container .KeteranganSeries .detailSeries .perEpisode:hover {
+  background-color: #80a1fc;
+}
+
+.containerMateri .container .KeteranganSeries .detailSeries .perEpisode .icon {
+  width: 40px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-right: 10px;
+  border-radius: 50%;
+  background-color: var(--putih-900);
 }
 
 @media (min-width: 1500px) {
-  .container {
+  .containerMateri .container {
     max-width: 1500px;
   }
-  header {
+  .containerMateri header {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1285,38 +1476,38 @@ footer .container {
 }
 
 @media (max-width: 1100px) {
-  header {
+  .containerMateri header {
     padding: 0 25px;
   }
 }
 
 @media (max-width: 900px) {
-  header .container .kanan .logo h1 {
+  .containerMateri header .container .kanan .logo h1 {
     font-size: 1.2rem;
   }
-  header .container .kanan nav {
+  .containerMateri header .container .kanan nav {
     display: none;
   }
-  header .container .kiri .icon {
+  .containerMateri header .container .kiri .icon {
     margin-right: 20px;
     font-size: 1.3rem;
   }
-  header .container .kiri .profil {
+  .containerMateri header .container .kiri .profil {
     margin-left: 0;
     margin-right: 20px;
   }
-  header .container .kiri .garis {
+  .containerMateri header .container .kiri .garis {
     display: none;
   }
-  header .container .kiri .auth {
+  .containerMateri header .container .kiri .auth {
     display: none;
   }
-  header .container .kiri .menu {
+  .containerMateri header .container .kiri .menu {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
-  .containerNavMobile {
+  .containerMateri .containerNavMobile {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1324,28 +1515,28 @@ footer .container {
 }
 
 @media (max-width: 600px) {
-  header {
+  .containerMateri header {
     padding: 0 10px;
   }
 }
 
 @media (max-width: 500px) {
-  header .container .kanan .logo img {
+  .containerMateri header .container .kanan .logo img {
     width: 35px;
     height: 35px;
   }
-  header .container .kanan .logo h1 {
+  .containerMateri header .container .kanan .logo h1 {
     font-size: 1.1rem;
     line-height: 20px;
   }
 }
 
 @media (max-width: 400px) {
-  header .container .kanan .logo img {
+  .containerMateri header .container .kanan .logo img {
     display: none;
   }
-  header .container .kiri .icon,
-  header .container .kiri .profil {
+  .containerMateri header .container .kiri .icon,
+  .containerMateri header .container .kiri .profil {
     margin-right: 15px;
   }
 }

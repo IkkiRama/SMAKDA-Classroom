@@ -3,6 +3,7 @@
     --background-heroHome: linear-gradient(to top right, #450b7c, #563cc9, #49e9fb);
     --background-header: linear-gradient(to right, #450b7c, #563cc9);
     --kuningCerah: rgb(255, 160, 17);
+    --putih-mandan-ireng: rgb(231, 231, 231);
 
     --hero: #111827;
 
@@ -412,7 +413,7 @@ header {
             flex-wrap: wrap;
             margin-top: 50px;
             border-radius: 10px;
-            background-color: rgb(231, 231, 231);
+            background-color: var(--putih-mandan-ireng);
 
             .perTopik {
                 padding: 7px 20px;
@@ -588,6 +589,10 @@ header {
                 display: flex;
                 align-items: center;
                 margin: 20px 0;
+
+                &:hover strong {
+                    color: var(--biru-cerah);
+                }
 
                 p {
                     font-size: .9rem;
@@ -945,10 +950,14 @@ footer .container {
                 }
 
                 .materi {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
 
-                    p {
+                    a {
+                        width: 100%;
                         padding: 20px;
-                        margin: 10px 0;
+                        margin: 5px 0;
                         font-weight: 550;
                         border-radius: 10px;
                         background-color: #EFF2F6;
@@ -1045,8 +1054,12 @@ footer .container {
         justify-content: space-between;
 
         .detailMateri {
-            width: 70%;
+            width: 65%;
             margin-right: 20px;
+
+            &>* {
+                margin: 20px 0;
+            }
 
             .infoMateri {
                 width: 100%;
@@ -1113,168 +1126,312 @@ footer .container {
                 }
             }
 
-            &>* {
-                margin: 20px 0;
-            }
-        }
 
-        .KeteranganSeries {
-            width: 30%;
-            // height: 100vh;
-            background-color: red;
-        }
-    }
-}
+            .komentar {
+                width: 100%;
+                height: 100%;
+                margin-top: 50px;
 
-// Per Detail Kelas End 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media(min-width:1500px) {
-    .container {
-        max-width: 1500px;
-    }
-
-    header {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-}
-
-@media(max-width:1100px) {
-
-    header {
-        padding: 0 25px;
-    }
-}
-
-
-@media(max-width:900px) {
-
-    header {
-
-        .container {
-
-            .kanan {
-
-                .logo h1 {
-                    font-size: 1.2rem;
-                }
-
-                nav {
-                    display: none;
-                }
-            }
-
-            .kiri {
-
-                .icon {
-                    margin-right: 20px;
-                    font-size: 1.3rem;
-                }
-
-                .profil {
-                    margin-left: 0;
-                    margin-right: 20px;
-                }
-
-                .garis {
-                    display: none;
-                }
-
-                .auth {
-                    display: none;
-                }
-
-                .menu {
+                .tulisKomentar {
+                    width: 100%;
+                    padding: 15px;
+                    cursor: pointer;
                     display: flex;
-                }
-            }
-
-        }
-    }
-
-    .containerNavMobile {
-        display: flex;
-    }
-
-}
-
-@media(max-width:600px) {
-    header {
-        padding: 0 10px;
-    }
-}
-
-@media(max-width:500px) {
-    header {
-
-        .container {
-
-            .kanan {
-
-                .logo {
+                    margin-bottom: 50px;
+                    align-items: center;
+                    border-radius: 7px;
+                    border: 2px dashed rgba(0, 0, 0, 0.1);
+                    background-color: var(--putih);
 
                     img {
                         width: 35px;
                         height: 35px;
+                        object-fit: cover;
+                        border-radius: 50%;
+                        margin-right: 15px;
+                        background-color: var(--putih-900);
+                    }
+                }
+
+                .perKomentar {
+                    width: 100%;
+                    // height: 100%;
+                    margin-top: 30px;
+
+                    .balasan {
+                        margin-top: 20px;
+                        margin-left: 50px;
                     }
 
-                    h1 {
-                        font-size: 1.1rem;
-                        line-height: 20px;
+                    .profil {
+                        display: flex;
+                        align-items: center;
+
+                        img {
+                            width: 40px;
+                            height: 40px;
+                            object-fit: cover;
+                            border-radius: 50%;
+                            margin-right: 15px;
+                            background-color: var(--putih-900);
+                        }
+
+                        .caption {
+                            display: flex;
+                            flex-direction: column;
+
+                            .nama {
+                                display: flex;
+                                align-items: center;
+
+                                svg {
+                                    color: var(--biru-cerah);
+                                    margin-left: 10px;
+                                }
+                            }
+
+                            span {
+                                font-size: .9rem;
+                            }
+                        }
+                    }
+
+                    .isiKomentar {
+                        margin: 20px 0;
+                    }
+
+                    .cta {
+                        width: 100%;
+                        height: 100%;
+                        padding: 7px 20px;
+                        border-radius: 7px;
+                        background-color: var(--putih-mandan-ireng);
+                    }
+                }
+            }
+        }
+
+        .KeteranganSeries {
+            width: 35%;
+            height: 100vh;
+            top: 15vh;
+            position: sticky;
+            align-self: flex-start;
+
+            &>* {
+                width: 100%;
+                padding: 20px;
+                margin: 20px 0;
+                border-radius: 10px;
+                border: var(--border);
+            }
+
+            .titleSeries {
+
+                h2 {
+                    font-size: 1rem;
+                    margin-bottom: 20px;
+                }
+
+                p {
+                    font-size: .9rem;
+                }
+            }
+
+
+            .detailSeries {
+                height: 400px;
+                padding: 0;
+                overflow-y: auto;
+
+                .perEpisode {
+                    width: 100%;
+                    padding: 20px;
+                    display: flex;
+                    align-items: center;
+                    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+                    &.active {
+                        background-color: var(--biru-cerah) !important;
+
+                        p {
+                            color: var(--putih);
+                        }
+
+                        .icon {
+                            color: var(--biru-cerah);
+                        }
+                    }
+
+                    &:hover {
+                        background-color: #80a1fc;
+                    }
+
+                    .icon {
+                        width: 40px;
+                        height: 40px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-right: 10px;
+                        border-radius: 50%;
+                        background-color: var(--putih-900);
                     }
                 }
             }
         }
     }
-}
+
+    // Per Detail Kelas End 
 
 
 
 
-@media(max-width:400px) {
-    header {
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    @media(min-width:1500px) {
         .container {
+            max-width: 1500px;
+        }
 
-            .kanan {
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
 
-                .logo {
+    @media(max-width:1100px) {
 
-                    img {
+        header {
+            padding: 0 25px;
+        }
+    }
+
+
+    @media(max-width:900px) {
+
+        header {
+
+            .container {
+
+                .kanan {
+
+                    .logo h1 {
+                        font-size: 1.2rem;
+                    }
+
+                    nav {
                         display: none;
                     }
                 }
+
+                .kiri {
+
+                    .icon {
+                        margin-right: 20px;
+                        font-size: 1.3rem;
+                    }
+
+                    .profil {
+                        margin-left: 0;
+                        margin-right: 20px;
+                    }
+
+                    .garis {
+                        display: none;
+                    }
+
+                    .auth {
+                        display: none;
+                    }
+
+                    .menu {
+                        display: flex;
+                    }
+                }
+
             }
+        }
 
-            .kiri {
+        .containerNavMobile {
+            display: flex;
+        }
+
+    }
+
+    @media(max-width:600px) {
+        header {
+            padding: 0 10px;
+        }
+    }
+
+    @media(max-width:500px) {
+        header {
+
+            .container {
+
+                .kanan {
+
+                    .logo {
+
+                        img {
+                            width: 35px;
+                            height: 35px;
+                        }
+
+                        h1 {
+                            font-size: 1.1rem;
+                            line-height: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
 
 
-                .icon,
-                .profil {
-                    margin-right: 15px;
+
+
+    @media(max-width:400px) {
+        header {
+
+            .container {
+
+                .kanan {
+
+                    .logo {
+
+                        img {
+                            display: none;
+                        }
+                    }
+                }
+
+                .kiri {
+
+
+                    .icon,
+                    .profil {
+                        margin-right: 15px;
+                    }
                 }
             }
         }
