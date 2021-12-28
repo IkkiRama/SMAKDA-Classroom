@@ -1147,6 +1147,126 @@ footer .container {
   font-weight: 500;
 }
 
+.heroMateri {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--hero);
+}
+
+.heroMateri .container img,
+.heroMateri .container iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.containerMateri {
+  width: 100%;
+  height: 100%;
+}
+
+.containerMateri .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.containerMateri .container .detailMateri {
+  width: 70%;
+  margin-right: 20px;
+}
+
+.containerMateri .container .detailMateri .infoMateri {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 20px;
+  border-radius: 10px;
+  border: var(--border);
+  position: relative;
+}
+
+.containerMateri .container .detailMateri .infoMateri .kanan {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.containerMateri .container .detailMateri .infoMateri h2 {
+  font-size: 1.2rem;
+  margin-left: 20px;
+}
+
+.containerMateri .container .detailMateri .infoMateri .icon {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+  background-color: var(--putih);
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.containerMateri .container .detailMateri .infoMateri .icon:hover {
+  color: var(--putih);
+  background-color: var(--biru-cerah);
+}
+
+.containerMateri .container .detailMateri article {
+  width: 100%;
+  padding: 20px;
+  border-radius: 10px;
+  border: var(--border);
+}
+
+.containerMateri .container .detailMateri article ul {
+  margin: 10px 0;
+}
+
+.containerMateri .container .detailMateri article ul li {
+  margin: 5px 0 5px 20px;
+  list-style: initial;
+}
+
+.containerMateri .container .detailMateri article p {
+  margin: 5px 0;
+}
+
+.containerMateri .container .detailMateri > * {
+  margin: 20px 0;
+}
+
+.containerMateri .container .KeteranganSeries {
+  width: 30%;
+  background-color: red;
+}
+
 @media (min-width: 1500px) {
   .container {
     max-width: 1500px;
