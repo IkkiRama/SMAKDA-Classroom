@@ -16,6 +16,7 @@ form .form-group {
       -ms-flex-direction: column;
           flex-direction: column;
   position: relative;
+  margin: 10px 0;
 }
 
 form .form-group textarea,

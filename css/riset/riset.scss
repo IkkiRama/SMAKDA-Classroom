@@ -3,6 +3,9 @@
     --background-heroHome: linear-gradient(to top right, #450b7c, #563cc9, #49e9fb);
     --background-header: linear-gradient(to right, #450b7c, #563cc9);
     --kuningCerah: rgb(255, 160, 17);
+    --putih-mandan-ireng: rgb(231, 231, 231);
+
+    --hero: #111827;
 
     --hitam-santai: #302f2f;
     --putih: #fff;
@@ -18,8 +21,36 @@
     --danger: #dc3545;
     --primary: #007bff;
     --warning: #ffc107;
-}
+    --dark: rgb(55 65 81);
 
+
+    --danger-hover: #c52939;
+    --primary-hover: #0070e7;
+    --warning-hover: #e2ab06;
+    --dark-hover: #2F3949;
+
+    --border-table: 1px solid #dee2e6;
+    --table-dark: #343a40;
+    --tr: rgba(0, 0, 0, 0.05);
+
+
+    --outline-input: #0176f4bd;
+    --outline-button: #63aeffbd;
+    --outline-warning: #ffe601f1;
+    --outline-white: rgb(207, 207, 207);
+    --outline-dark: #717172;
+
+
+
+
+    --tw-gradient-to: #06b6d4;
+    --tw-gradient-from: #0d6efd;
+    --tw-gradient-stops: #0d6efd,
+        #22d3ee,
+        #06b6d4;
+    // rgba(34, 211, 238, 0)
+    // --tw-gradient-stops: var(--tw-gradient-from, #22d3ee, var(--tw-gradient-to, rgba(34, 211, 238, 0)));
+}
 
 
 *,
