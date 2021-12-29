@@ -403,51 +403,57 @@ header {
         margin-top: 50px;
         justify-content: space-between;
 
+        &.pageFAQ {
+            flex-direction: column;
+        }
+
         .kiri,
         .kanan {
             width: 50%;
             height: 100%;
             margin: 0 10px;
 
-            .perFAQ {
-                width: 100%;
-                height: 100%;
+        }
+    }
+}
 
-                .pertanyaan {
-                    padding: 20px;
-                    cursor: pointer;
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                    border-radius: 7px;
-                    border-bottom: var(--border);
-                    background-color: var(--putih-900);
 
-                    p {
-                        font-weight: 600;
-                    }
+.perFAQ {
+    width: 100%;
+    height: 100%;
 
-                    .icon {
-                        color: var(--hitam-santai);
-                        fill: var(--hitam-santai);
-                        font-size: 1.4rem;
-                        transition: .5s;
-                    }
+    .pertanyaan {
+        padding: 20px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 7px;
+        border-bottom: var(--border);
+        background-color: var(--putih-900);
 
-                    .icon.active {
-                        transform: rotate(180deg);
-                    }
-                }
+        p {
+            font-weight: 600;
+        }
 
-                .jawaban {
-                    padding: 20px;
-                    display: none;
+        .icon {
+            color: var(--hitam-santai);
+            fill: var(--hitam-santai);
+            font-size: 1.4rem;
+            transition: .5s;
+        }
 
-                    &.show {
-                        display: inline-block;
-                    }
-                }
-            }
+        .icon.active {
+            transform: rotate(180deg);
+        }
+    }
+
+    .jawaban {
+        padding: 20px;
+        display: none;
+
+        &.show {
+            display: inline-block;
         }
     }
 }
@@ -1227,11 +1233,9 @@ footer .container {
             }
         }
     }
+}
 
-    // Per Detail Kelas End 
-
-
-
+// Per Detail Kelas End 
 
 
 
@@ -1240,6 +1244,33 @@ footer .container {
 
 
 
+// kontak kami
+.kontak {
+    width: 100%;
+    // height: 100vh;
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .caption,
+        img {
+            height: 100%;
+            width: 50%;
+        }
+
+        .caption {
+            margin-left: 50px;
+
+
+            h1 {
+                font-size: 2.1rem;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
 
 
 
@@ -1252,132 +1283,210 @@ footer .container {
 
 
 
-    @media(min-width:1500px) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// page PrivacyPolicy start 
+.TermsCondition,
+.PrivacyPolicy {
+    width: 100%;
+    height: 100%;
+
+    p {
+        margin: 20px 0;
+        font-size: 1.1rem;
+        line-height: 30px;
+    }
+
+    ul li {
+        padding: 10px;
+        font-size: 1.1rem;
+        margin-left: 20px;
+        line-height: 30px;
+        list-style: decimal;
+    }
+
+    h2 {
+        margin: 10px 0;
+        font-size: 1.3rem;
+    }
+}
+
+// page PrivacyPolicy end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(min-width:1500px) {
+    .container {
+        max-width: 1500px;
+    }
+
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media(max-width:1100px) {
+
+    header {
+        padding: 0 25px;
+    }
+}
+
+
+@media(max-width:900px) {
+
+    header {
+
         .container {
-            max-width: 1500px;
-        }
 
-        header {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-    }
+            .kanan {
 
-    @media(max-width:1100px) {
-
-        header {
-            padding: 0 25px;
-        }
-    }
-
-
-    @media(max-width:900px) {
-
-        header {
-
-            .container {
-
-                .kanan {
-
-                    .logo h1 {
-                        font-size: 1.2rem;
-                    }
-
-                    nav {
-                        display: none;
-                    }
+                .logo h1 {
+                    font-size: 1.2rem;
                 }
 
-                .kiri {
-
-                    .icon {
-                        margin-right: 20px;
-                        font-size: 1.3rem;
-                    }
-
-                    .profil {
-                        margin-left: 0;
-                        margin-right: 20px;
-                    }
-
-                    .garis {
-                        display: none;
-                    }
-
-                    .auth {
-                        display: none;
-                    }
-
-                    .menu {
-                        display: flex;
-                    }
+                nav {
+                    display: none;
                 }
-
             }
-        }
 
-        .containerNavMobile {
-            display: flex;
-        }
+            .kiri {
 
+                .icon {
+                    margin-right: 20px;
+                    font-size: 1.3rem;
+                }
+
+                .profil {
+                    margin-left: 0;
+                    margin-right: 20px;
+                }
+
+                .garis {
+                    display: none;
+                }
+
+                .auth {
+                    display: none;
+                }
+
+                .menu {
+                    display: flex;
+                }
+            }
+
+        }
     }
 
-    @media(max-width:600px) {
-        header {
-            padding: 0 10px;
-        }
+    .containerNavMobile {
+        display: flex;
     }
 
-    @media(max-width:500px) {
-        header {
+}
 
-            .container {
+@media(max-width:600px) {
+    header {
+        padding: 0 10px;
+    }
+}
 
-                .kanan {
+@media(max-width:500px) {
+    header {
 
-                    .logo {
+        .container {
 
-                        img {
-                            width: 35px;
-                            height: 35px;
-                        }
+            .kanan {
 
-                        h1 {
-                            font-size: 1.1rem;
-                            line-height: 20px;
-                        }
+                .logo {
+
+                    img {
+                        width: 35px;
+                        height: 35px;
+                    }
+
+                    h1 {
+                        font-size: 1.1rem;
+                        line-height: 20px;
                     }
                 }
             }
         }
     }
+}
 
 
 
 
-    @media(max-width:400px) {
-        header {
+@media(max-width:400px) {
+    header {
 
-            .container {
+        .container {
 
-                .kanan {
+            .kanan {
 
-                    .logo {
+                .logo {
 
-                        img {
-                            display: none;
-                        }
+                    img {
+                        display: none;
                     }
                 }
+            }
 
-                .kiri {
+            .kiri {
 
 
-                    .icon,
-                    .profil {
-                        margin-right: 15px;
-                    }
+                .icon,
+                .profil {
+                    margin-right: 15px;
                 }
             }
         }

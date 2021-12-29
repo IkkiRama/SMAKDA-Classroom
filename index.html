@@ -21,6 +21,7 @@
     <link rel="apple-touch-icon" href="img/logo.png">
     <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
     <script src="js/script.js" defer></script>
+    <script src="js/faq.js" defer></script>
 </head>
 
 <body>
@@ -582,7 +583,7 @@
                     <a href="index.html">FAQ</a>
                     <a href="destinasi.html">Blog</a>
                     <a href="destinasi.html">Asset</a>
-                    <a href="kontak.html">Testimonials</a>
+                    <a href="contact.html">Contact</a>
                     <a href="kontak.html">Privacy Policy</a>
                     <a href="kontak.html">Saweria (Donate)</a>
                     <a href="kontak.html">Terms & Condition</a>
@@ -650,15 +651,6 @@
         </div>
     </div>
 
-    <script>
-        let FAQ_icon = document.querySelectorAll(".perFAQ .pertanyaan .icon")
-        FAQ_icon.forEach(perFAQ => {
-            perFAQ.parentElement.addEventListener("click", () => {
-                perFAQ.classList.toggle("active")
-                perFAQ.parentElement.nextElementSibling.classList.toggle("show")
-            })
-        })
-    </script>
 </body>
 
 </html>

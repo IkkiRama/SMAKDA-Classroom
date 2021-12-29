@@ -500,6 +500,13 @@ header .container .kiri .menu span {
           justify-content: space-between;
 }
 
+.containerFAQ .container .FAQ.pageFAQ {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .containerFAQ .container .FAQ .kiri,
 .containerFAQ .container .FAQ .kanan {
   width: 50%;
@@ -507,14 +514,12 @@ header .container .kiri .menu span {
   margin: 0 10px;
 }
 
-.containerFAQ .container .FAQ .kiri .perFAQ,
-.containerFAQ .container .FAQ .kanan .perFAQ {
+.perFAQ {
   width: 100%;
   height: 100%;
 }
 
-.containerFAQ .container .FAQ .kiri .perFAQ .pertanyaan,
-.containerFAQ .container .FAQ .kanan .perFAQ .pertanyaan {
+.perFAQ .pertanyaan {
   padding: 20px;
   cursor: pointer;
   display: -webkit-box;
@@ -531,13 +536,11 @@ header .container .kiri .menu span {
   background-color: var(--putih-900);
 }
 
-.containerFAQ .container .FAQ .kiri .perFAQ .pertanyaan p,
-.containerFAQ .container .FAQ .kanan .perFAQ .pertanyaan p {
+.perFAQ .pertanyaan p {
   font-weight: 600;
 }
 
-.containerFAQ .container .FAQ .kiri .perFAQ .pertanyaan .icon,
-.containerFAQ .container .FAQ .kanan .perFAQ .pertanyaan .icon {
+.perFAQ .pertanyaan .icon {
   color: var(--hitam-santai);
   fill: var(--hitam-santai);
   font-size: 1.4rem;
@@ -545,20 +548,17 @@ header .container .kiri .menu span {
   transition: .5s;
 }
 
-.containerFAQ .container .FAQ .kiri .perFAQ .pertanyaan .icon.active,
-.containerFAQ .container .FAQ .kanan .perFAQ .pertanyaan .icon.active {
+.perFAQ .pertanyaan .icon.active {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
 
-.containerFAQ .container .FAQ .kiri .perFAQ .jawaban,
-.containerFAQ .container .FAQ .kanan .perFAQ .jawaban {
+.perFAQ .jawaban {
   padding: 20px;
   display: none;
 }
 
-.containerFAQ .container .FAQ .kiri .perFAQ .jawaban.show,
-.containerFAQ .container .FAQ .kanan .perFAQ .jawaban.show {
+.perFAQ .jawaban.show {
   display: inline-block;
 }
 
@@ -1419,11 +1419,70 @@ footer .container {
   background-color: var(--putih-900);
 }
 
+.kontak {
+  width: 100%;
+}
+
+.kontak .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.kontak .container .caption,
+.kontak .container img {
+  height: 100%;
+  width: 50%;
+}
+
+.kontak .container .caption {
+  margin-left: 50px;
+}
+
+.kontak .container .caption h1 {
+  font-size: 2.1rem;
+  margin-bottom: 20px;
+}
+
+.TermsCondition,
+.PrivacyPolicy {
+  width: 100%;
+  height: 100%;
+}
+
+.TermsCondition p,
+.PrivacyPolicy p {
+  margin: 20px 0;
+  font-size: 1.1rem;
+  line-height: 30px;
+}
+
+.TermsCondition ul li,
+.PrivacyPolicy ul li {
+  padding: 10px;
+  font-size: 1.1rem;
+  margin-left: 20px;
+  line-height: 30px;
+  list-style: decimal;
+}
+
+.TermsCondition h2,
+.PrivacyPolicy h2 {
+  margin: 10px 0;
+  font-size: 1.3rem;
+}
+
 @media (min-width: 1500px) {
-  .containerMateri .container {
+  .container {
     max-width: 1500px;
   }
-  .containerMateri header {
+  header {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1437,38 +1496,38 @@ footer .container {
 }
 
 @media (max-width: 1100px) {
-  .containerMateri header {
+  header {
     padding: 0 25px;
   }
 }
 
 @media (max-width: 900px) {
-  .containerMateri header .container .kanan .logo h1 {
+  header .container .kanan .logo h1 {
     font-size: 1.2rem;
   }
-  .containerMateri header .container .kanan nav {
+  header .container .kanan nav {
     display: none;
   }
-  .containerMateri header .container .kiri .icon {
+  header .container .kiri .icon {
     margin-right: 20px;
     font-size: 1.3rem;
   }
-  .containerMateri header .container .kiri .profil {
+  header .container .kiri .profil {
     margin-left: 0;
     margin-right: 20px;
   }
-  .containerMateri header .container .kiri .garis {
+  header .container .kiri .garis {
     display: none;
   }
-  .containerMateri header .container .kiri .auth {
+  header .container .kiri .auth {
     display: none;
   }
-  .containerMateri header .container .kiri .menu {
+  header .container .kiri .menu {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
-  .containerMateri .containerNavMobile {
+  .containerNavMobile {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1476,28 +1535,28 @@ footer .container {
 }
 
 @media (max-width: 600px) {
-  .containerMateri header {
+  header {
     padding: 0 10px;
   }
 }
 
 @media (max-width: 500px) {
-  .containerMateri header .container .kanan .logo img {
+  header .container .kanan .logo img {
     width: 35px;
     height: 35px;
   }
-  .containerMateri header .container .kanan .logo h1 {
+  header .container .kanan .logo h1 {
     font-size: 1.1rem;
     line-height: 20px;
   }
 }
 
 @media (max-width: 400px) {
-  .containerMateri header .container .kanan .logo img {
+  header .container .kanan .logo img {
     display: none;
   }
-  .containerMateri header .container .kiri .icon,
-  .containerMateri header .container .kiri .profil {
+  header .container .kiri .icon,
+  header .container .kiri .profil {
     margin-right: 15px;
   }
 }
